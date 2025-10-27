@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Form</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #d1d9d8, #d2d4dd);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: inline-block;
+      width: 120px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 180px;
+      padding: 6px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #74ebd5;
+      outline: none;
+      box-shadow: 0 0 5px rgba(116, 235, 213, 0.6);
+    }
+
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #53cebc;
+      border: none;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 5px;
+      margin: 10px 5px 0 0;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #e0eae9;
+    }
+
+    .result-input {
+      background-color: #f8f8f8;
+      font-weight: bold;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <form action="prgm12.php" method="get">
+    <h2>Student Marks Entry</h2>
+
+    <label>Your Name:</label>
+    <input type="text" name="name"><br>
+
+    <label>Class:</label>
+    <input type="text" name="class"><br>
+
+    <label>DS Mark:</label>
+    <input type="text" id="a" name="m1"><br>
+
+    <label>ASE Mark:</label>
+    <input type="text" id="b" name="m2"><br>
+
+    <label>MATHS Mark:</label>
+    <input type="text" id="c" name="m3"><br>
+
+    <input type="button" value="Calculate Total" onclick="fun()"><br>
+    <label>Total Marks:</label>
+    <input type="text" id="ab" name="xy" class="result-input" readonly><br>
+
+    <div style="text-align:center;">
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+  <script>
+    function fun(){
+      let x = parseFloat(document.getElementById("a").value) || 0;
+      let y = parseFloat(document.getElementById("b").value) || 0;
+      let z = parseFloat(document.getElementById("c").value) || 0;
+      let t = x + y + z;
+      document.getElementById("ab").value = t;
+    }
+  </script>
+
+</body>
+</html>
