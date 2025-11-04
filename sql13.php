@@ -9,7 +9,7 @@
     echo "Student Details";
     ?>
 <body>
-    <form action="roll.php" method="post">
+    <form action="update.php" method="post">
         <br><br><br>
         <center>Roll_no: <input type="text" id="b" name="Rollno"></center><br><br>
        <center> Name:  <input type="text" id="a" name="Name"></center><br><br>

@@ -9,7 +9,12 @@ if(mysqli_num_rows($result)>0){
     while($rows=mysqli_fetch_assoc($result))
     {
         echo '<option value='.$rows["Rollno"].'>'.$rows["Rollno"].'</option>';
+        
     }
+    
+    echo "<input type=button value=Search id=m name=search>";
+    $res="Select * from Form where "
+
     echo "</select>";
 }
 ?>
